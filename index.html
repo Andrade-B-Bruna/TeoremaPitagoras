@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Teorema de Pitágoras</title>
+        <meta name="description" content="Teorema de Pitágoras - Calculadora">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=GFS+Didot&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+        <link rel="icon" href ="img/pitagoras.png" type = "image/x-icon"> 
+        <header> 
+          <h1 class="titulo">Teorema de Pitágoras</h1> 
+        </header>
+    </head>
+
+    <body onload="typeWriter()">
+
+      <div class="container">
+                     
+              <div>
+                  <p>Olá, caro viajante do tempo!</p><br><br>
+                  <p>Você retornou ao passado para aproximadamente 535 A.C. e encontrou com o grande filósofo matemático Pitágoras que naquela época estava pensando em largar tudo e desistir de seu trabalho. Com isso, o seu retorno ao passado trouxe um enorme desafio, que irá revolucionar o mundo, mas para isso você precisa provar ao grande filósofo que tudo aquilo que ele tinha construído até o momento era algo promissor e por isso ele deveria continuar.
+                   <br> A sua missão nessa grande jornada é mostrar para ele que nada foi em vão, e para isso você precisará desenvolver uma calculadora que será capaz de calcular a relação entre os lados de um triângulo retângulo (mais conhecido popularmente como teorema de pitágoras).
+                </p>
+                    </div>
+
+              <div>
+                <section class="form-section">
+                  <form id="form" method="POST" action="">
+                        <p>Informe os catetos para achar a hipotenusa!</p>
+                      
+                      <div class="input-block">
+                        <label for="cat_op"><br>Cateto oposto: </label>
+                        <input id="cat_op" type="number">
+                      </div>
+  
+                      <div class="input-block">
+                        <label for="cat_adj">Cateto adjacente: </label>
+                        <input id="cat_adj" type="number">
+                      </div>
+
+                      <div class="input-block">
+                        <label for="hipotenusa">Hipotenusa:</label>
+                        <input type="text" disabled="true" id="hipotenusa">
+                      </div>
+                                         
+                    <button class="btn-calcular" onclick="calcular()">Calcular</button>
+                       </div>
+                      
+
+                  </form>
+                </section>
+                
+          </div>
+        </div>
+
+        <script src="js/funcoes.js"></script>  
+
+        
+       <footer >
+
+        <div id="pop" class="pop-up">
+            <div id="caixa" class="caixa">
+              <img class="busto" src="img/pitagoras.png" alt="Busto Pitagoras">
+              
+             <div class="conversa">
+                 <p class="nick"><b><u>Pitágoras:</u></b></h3>
+                 <p id="frase1" class="typing"></p>
+             </div>
+             </div>
+             <button id="botao1" class="fechar" onclick="ajudar()">✔</button>
+        </div>
+        
+            <script>
+              var i = 0;
+              var txt = 'Soube que vieste do futuro! Estou a pensar sobre meus estudos e quero saber se terei êxito... Podes me ajudar?';
+              var speed = 50;
+              
+              function typeWriter() {
+              
+                if (i < txt.length) {
+                  document.getElementById("frase1").innerHTML += txt.charAt(i);
+                  i++;
+                  setTimeout(typeWriter, speed);
+                  
+                }            
+              }
+              
+              function ajudar() {
+                  var x = document.getElementById("pop");
+                  if (x.style.display === "none") {
+                    x.style.display = "block";
+                  } else {
+                    x.style.display = "none";
+                  }
+                }
+              
+              
+              </script>
+     
+       </footer> 
+    </body>
+</html>
