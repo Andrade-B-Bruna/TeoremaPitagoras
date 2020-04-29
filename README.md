@@ -1,4 +1,4 @@
-# CalculadoraPitagoras
+# Calculadora do Teorema de Pitagoras
 
 Olá caro viajante do tempo!
 
@@ -7,3 +7,7 @@ Você retornou ao passado para aproximadamente 535 A.C. e encontrou com o grande
 A sua missão nessa grande jornada é mostrar para ele que nada foi em vão, e para isso você precisará desenvolver uma calculadora que será capaz de calcular a relação entre os lados de um triângulo retângulo (mais conhecido popularmente como teorema de pitágoras).
 
 Informe os catetos para achar a hipotenusa!
+
+
+
+Atenção: esta calculadora utiliza parâmetros parecidos com o utilizado na minha Calculadora POP, da 99 App. Porém, por motivos de segurança, o código não pode ser compartilhado.
